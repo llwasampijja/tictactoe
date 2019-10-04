@@ -50,6 +50,7 @@ const clickCell = (cell) => {
 
         for (var cellIndex = 0; cellIndex < staightLine.length; cellIndex++) {
             cell = document.getElementById(String(staightLine[cellIndex][0]) + String(staightLine[cellIndex][1]));
+            cell.style.background = "white";
             cell.style.color = "green";
         }
         message.innerHTML = "You lose, I win! Better luck next time";
@@ -204,14 +205,19 @@ const validateMove = (xPosition, yPosition) => {
 const resetGame = () => {
     var htmlBoard;
 
-    for (var x = 0; x < 3; x++) {
-        for (var y = 0; y < 3; y++) {
-            board[x][y] = 0;
-            htmlBoard = document.getElementById(String(x) + String(y));
-            htmlBoard.style.color = "#444";
+    for (var column = 0; column < 3; column++) {
+        for (var row = 0; row < 3; row++) {
+            board[column][row] = 0;
+            htmlBoard = document.getElementById(String(column) + String(row));
             htmlBoard.innerHTML = "";
         }
     }
     message.innerHTML = "";
     resetButton.disabled = false;
+    firstMoveButton.disabled = false;
+}
+
+const playFirst = (button) => {
+    computerzTurn();
+    button.disabled = true;
 }
