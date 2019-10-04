@@ -1,0 +1,23 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "This is a game where a player plays against an Artificial Intelligence.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llwasampijja/tictactoe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/llwasampijja/tictactoe/issues"
+  },
+  "homepage": "https://github.com/llwasampijja/tictactoe#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}

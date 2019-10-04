@@ -229,3 +229,5 @@ const playFirst = (button) => {
     button.disabled = true;
     resetButton.disabled = true;
 }
+
+module.exports = setMove;
