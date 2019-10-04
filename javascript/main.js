@@ -215,7 +215,7 @@ const resetGame = () => {
             cell.classList.remove("blink");
             cell.innerHTML = "";
             cell.style.background = "rgb(122, 168, 196)";
-            cell.style.color = "green";
+            cell.style.color = "#FFFFFF";
         }
     }
     message.innerHTML = MESSAGEBOARD;
