@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/llwasampijja/tictactoe.svg?branch=develop)](https://travis-ci.com/llwasampijja/tictactoe)
+[![Build Status](https://travis-ci.com/llwasampijja/tictactoe.svg?branch=develop)](https://travis-ci.com/llwasampijja/tictactoe)  [![Coverage Status](https://coveralls.io/repos/github/llwasampijja/tictactoe/badge.svg?branch=develop)](https://coveralls.io/github/llwasampijja/tictactoe?branch=develop)
 
 # TicTacToe
 This is a game where a player plays against an Artificial Intelligence.
