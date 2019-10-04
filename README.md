@@ -1,5 +1,5 @@
 # TicTacToe
-This is a Gaming and Artificial Intelligence
+This is a game where a player plays against an Artificial Intelligence.
 
 ## GitHub Pages link
 [Tic Tac Toe](https://llwasampijja.github.io/tictactoe/)
