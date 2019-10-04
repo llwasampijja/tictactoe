@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <h1>Welcome to TicTacToe Game</h1>
+  <h1>Welcome to the TicTacToe Game</h1>
   <table id="ttt-table">
     <tr>
       <td id='00' onclick="clickCell(this)"></td>
@@ -28,10 +28,10 @@
       <td id='22' onclick="clickCell(this)"></td>
     </tr>
   </table>
-  <span id="message-board">Start the game</span>
+  <span id="message-board">Hey, I'm ANN, am an AI. You can just start playin, or tell me to go first!</span>
   <div id="btns-collection">
-    <button id="reset-game" onclick="resetGame()">Reset</button>
-    <button type="button" id="first-player">Go First</button>
+    <button id="reset-game" onclick="resetGame()">Play Again?</button>
+    <button type="button" id="first-player" onclick="playFirst(this)">ANN, Go First</button>
   </div>
 </body>
 <script src="javascript/main.js"></script>
