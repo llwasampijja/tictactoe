@@ -4,6 +4,7 @@ let board = [
     [0, 0, 0],
 ];
 
+let MESSAGEBOARD = "Hey, I'm ANN, am an AI. You can just start playin, or tell me to go first!"
 let COMPUTER = +1;
 let OPPONENT = -1;
 
@@ -15,6 +16,7 @@ let firstMoveButton = document.getElementById("first-player");
 const clickCell = (cell) => {
     resetButton.disabled = true;
     firstMoveButton.disabled = true;
+    message.innerHTML = "It's on! Bring your A-Game, the rumors are true, am really good!"
     let conditionToContinue = gameOverStatus(board) == false && returnEmptyCells(board).length > 0;
     if (conditionToContinue == true) {
         let xPosition = cell.id.split("")[0];
@@ -50,10 +52,11 @@ const clickCell = (cell) => {
 
         for (var cellIndex = 0; cellIndex < staightLine.length; cellIndex++) {
             cell = document.getElementById(String(staightLine[cellIndex][0]) + String(staightLine[cellIndex][1]));
-            cell.style.background = "white";
+            cell.style.background = "#BEC2EC";
+            cell.className += " " + "blink";
             cell.style.color = "green";
         }
-        message.innerHTML = "You lose, I win! Better luck next time";
+        message.innerHTML = "I win, You lose! Better luck next time";
     }
     if (returnEmptyCells(board).length == 0 && !gameOverStatus(board)) {
         message.innerHTML = "It's a draw! Good game, perhaps you will beat me next time!";
@@ -203,21 +206,26 @@ const validateMove = (xPosition, yPosition) => {
 }
 
 const resetGame = () => {
-    var htmlBoard;
+    let cell;
 
     for (var column = 0; column < 3; column++) {
         for (var row = 0; row < 3; row++) {
             board[column][row] = 0;
-            htmlBoard = document.getElementById(String(column) + String(row));
-            htmlBoard.innerHTML = "";
+            cell = document.getElementById(String(column) + String(row));
+            cell.classList.remove("blink");
+            cell.innerHTML = "";
+            cell.style.background = "rgb(122, 168, 196)";
+            cell.style.color = "green";
         }
     }
-    message.innerHTML = "";
+    message.innerHTML = MESSAGEBOARD;
     resetButton.disabled = false;
     firstMoveButton.disabled = false;
 }
 
 const playFirst = (button) => {
     computerzTurn();
+    message.innerHTML = "It's on! Bring your A-Game, the rumors are true, am really good!"
     button.disabled = true;
+    resetButton.disabled = true;
 }

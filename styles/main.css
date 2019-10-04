@@ -2,12 +2,15 @@
 */
 body {
   text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
   color: red;
   margin: auto;
   text-align: center;
+  background: #A8A7AE;
+  margin-bottom: 10px;
 }
 table {
   width: 30%;
@@ -36,17 +39,38 @@ td {
 }
 
 td:hover {
-  background: gray;
+  background: rgba(122, 168, 196, 0.5);
 }
 
 #message-board {
+  margin-top: 10px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 
 #btns-collection {
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
+
+@keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.2;}
+}
+.blink{
+	text-decoration: blink;
+	animation-name: blinker;
+	animation-duration: 0.6s;
+	animation-iteration-count:infinite;
+	animation-timing-function:ease-in-out;
+	animation-direction: alternate;
+}
+
+button {
+  padding: 5px;
+}
+
+button:focus {outline:0;}
