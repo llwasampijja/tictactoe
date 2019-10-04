@@ -214,4 +214,10 @@ const resetGame = () => {
     }
     message.innerHTML = "";
     resetButton.disabled = false;
+    firstMoveButton.disabled = false;
+}
+
+const playFirst = (button) => {
+    computerzTurn();
+    button.disabled = true;
 }
