@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/llwasampijja/tictactoe.svg?branch=develop)](https://travis-ci.com/llwasampijja/tictactoe)
+
 # TicTacToe
 This is a game where a player plays against an Artificial Intelligence.
 
