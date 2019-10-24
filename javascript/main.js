@@ -4,16 +4,13 @@ let board = [
     [0, 0, 0],
 ];
 
-let MESSAGEBOARD = "Hey, I'm ANN, am an AI. You can just start playin, or tell me to go first!"
 let COMPUTER = +1;
 let OPPONENT = -1;
 
-let message = document.getElementById("message-board");
-let resetButton = document.getElementById("reset-game");
-let firstMoveButton = document.getElementById("first-player");
-
-
 const clickCell = (cell) => {
+    let resetButton = document.getElementById("reset-game");
+    let firstMoveButton = document.getElementById("first-player");
+    let message = document.getElementById("message-board");
     resetButton.disabled = true;
     firstMoveButton.disabled = true;
     message.innerHTML = "It's on! Bring your A-Game, the rumors are true, am really good!"
@@ -205,29 +202,9 @@ const validateMove = (xPosition, yPosition) => {
     }
 }
 
-const resetGame = () => {
-    let cell;
-
-    for (var column = 0; column < 3; column++) {
-        for (var row = 0; row < 3; row++) {
-            board[column][row] = 0;
-            cell = document.getElementById(String(column) + String(row));
-            cell.classList.remove("blink");
-            cell.innerHTML = "";
-            cell.style.background = "rgb(122, 168, 196)";
-            cell.style.color = "#FFFFFF";
-        }
-    }
-    message.innerHTML = MESSAGEBOARD;
-    resetButton.disabled = false;
-    firstMoveButton.disabled = false;
+if (typeof exports !== 'undefined') {
+    module.exports = {
+        clickCell,
+        setMove,
+    };
 }
-
-const playFirst = (button) => {
-    computerzTurn();
-    message.innerHTML = "It's on! Bring your A-Game, the rumors are true, am really good!"
-    button.disabled = true;
-    resetButton.disabled = true;
-}
-
-module.exports = setMove;
